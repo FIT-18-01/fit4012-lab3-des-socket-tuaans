@@ -1,0 +1,16 @@
+Evidence of successful communication:
+
+Receiver listening:
+Đang lắng nghe 0.0.0.0:6000...
+
+Connection established:
+Kết nối từ ('127.0.0.1', 56492)
+
+Decrypted message:
+[+] Bản tin gốc: Hello Lab3 Evidence
+
+Sender log:
+[+] Đã gửi bản mã.
+Key: 331669e8020f0bc1
+IV: 64c3f040fe335643
+Ciphertext: c2899e406889d0a8b2cec1c1282d4dfd3e27d5809f5b6336

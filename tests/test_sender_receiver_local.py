@@ -22,6 +22,7 @@ def test_local_sender_receiver_roundtrip():
         "PYTHONIOENCODING": "utf-8",
         "RECEIVER_HOST": "127.0.0.1",
         "RECEIVER_PORT": str(port),
+        "RECEIVER_LOG_FILE": "logs/test_receiver.log",
         "SOCKET_TIMEOUT": "5",
     })
     sender_env = os.environ.copy()
@@ -30,6 +31,7 @@ def test_local_sender_receiver_roundtrip():
         "PYTHONIOENCODING": "utf-8",
         "SERVER_IP": "127.0.0.1",
         "SERVER_PORT": str(port),
+        "SENDER_LOG_FILE": "logs/test_sender.log",
         "MESSAGE": "Xin chao FIT4012 - local integration test",
     })
 

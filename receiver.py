@@ -16,9 +16,15 @@ def main() -> None:
         s.listen(1)
         s.settimeout(TIMEOUT)
         print(f"Đang lắng nghe {HOST}:{PORT}...")
+        if LOG_FILE:
+            with open(LOG_FILE, 'w', encoding='utf-8') as f:
+                f.write(f"Đang lắng nghe {HOST}:{PORT}...\n")
         conn, addr = s.accept()
         with conn:
             print(f"Kết nối từ {addr}")
+            if LOG_FILE:
+                with open(LOG_FILE, 'a', encoding='utf-8') as f:
+                    f.write(f"Kết nối từ {addr}\n")
             header = recv_exact(conn, HEADER_SIZE)
             key, iv, length = parse_header(header)
             cipher_bytes = recv_exact(conn, length)
@@ -31,7 +37,7 @@ def main() -> None:
                 with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
                     f.write(message)
             if LOG_FILE:
-                with open(LOG_FILE, 'w', encoding='utf-8') as f:
+                with open(LOG_FILE, 'a', encoding='utf-8') as f:
                     f.write(line + '\n')
 
 

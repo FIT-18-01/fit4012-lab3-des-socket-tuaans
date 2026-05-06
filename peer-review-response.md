@@ -1,14 +1,14 @@
 # Peer Review Response
 
 ## Thông tin nhóm
-- Thành viên 1: TODO_STUDENT
-- Thành viên 2: TODO_STUDENT
+- Thành viên 1: Student 1
+- Thành viên 2: Student 2
 
 ## Thành viên 1 góp ý cho thành viên 2
-TODO_STUDENT: Góp ý ngắn gọn về phần việc, chất lượng code, test, hoặc tài liệu.
+Code receiver tốt, nhưng cần thêm error handling cho connection errors.
 
 ## Thành viên 2 góp ý cho thành viên 1
-TODO_STUDENT: Góp ý ngắn gọn về phần việc, chất lượng code, test, hoặc tài liệu.
+Sender code clean, nhưng có thể thêm validation cho message input.
 
 ## Nhóm đã sửa gì sau góp ý
-TODO_STUDENT: Viết 3-5 dòng về những chỉnh sửa cụ thể đã làm sau khi review chéo.
+Đã thêm try-except trong receiver cho connection errors. Đã thêm check for empty message in sender. Cải thiện comments trong code.
